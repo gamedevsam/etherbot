@@ -6,7 +6,8 @@ Please check the [contributing guide](https://github.com/LucasBassetti/'react-si
 
 ## Authors
 
-|  [Lucas Bassetti](https://github.com/LucasBassetti/)   | [Samuel Batista](https://github.com/gamedevsam/)
+[Samuel Batista](https://github.com/gamedevsam/)
+[Lucas Bassetti](https://github.com/LucasBassetti/)
 
 See also the list of [contributors](https://github.com/LucasBassetti/'react-simple-chatbot/contributors) who participated in this project.
 
