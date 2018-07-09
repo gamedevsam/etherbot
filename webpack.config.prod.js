@@ -8,9 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'docs'),
     filename: 'etherbot.[chunkhash].js',
-    publicPath: 'docs/',
-    library: 'EtherBot',
-    libraryTarget: 'umd',
+    publicPath: 'docs/'
   },
   resolve: {
     extensions: ['.js', '.jsx'],
