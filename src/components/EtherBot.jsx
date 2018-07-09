@@ -1,8 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
 import { ThemeProvider } from 'styled-components';
 import { isMobile } from 'react-device-detect';
 import ChatBot from 'react-simple-chatbot';
+import EtherBotContainer from './EtherBotContainer';
+import {
+  mobileWidth,
+  mobileHeight,
+  browserWidth,
+  browserHeight
+} from './EtherBotContainer';
 import Price from './Price';
 import AccessMyWallet from './AccessMyWallet';
 import CreateWallet from './CreateWallet';
@@ -11,20 +17,6 @@ import PrivacyAndSecurity from './PrivacyAndSecurity';
 import Settings from './Settings';
 import About from './About';
 import { validateAddress } from '../utils';
-
-var mobileWidth = 350;
-var mobileHeight = 520;
-var browserWidth = 800;
-var browserHeight = 600;
-const EtherBotContainer = styled.div`
-  position: absolute;
-  width: ${isMobile ? mobileWidth : browserWidth}px;
-  height: ${isMobile ? mobileHeight : browserHeight}px;
-  z-index: 15;
-  top: 50%;
-  left: 50%;
-  margin: -${(isMobile ? mobileHeight : browserHeight) / 2}px 0 0 -${(isMobile ? mobileWidth : browserWidth) / 2}px;
-`
 
 var menuCount = 0;
 const steps = [
