@@ -3,12 +3,12 @@ const path = require('path');
 module.exports = {
   entry: path.resolve(__dirname, 'src/main.jsx'),
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'docs'),
     publicPath: '/',
     filename: 'etherbot.js',
   },
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: path.join(__dirname, 'docs'),
     host: '0.0.0.0',
     port: 8080,
     disableHostCheck: true,

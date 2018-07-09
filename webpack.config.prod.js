@@ -4,9 +4,9 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
   entry: path.resolve(__dirname, 'src/main.jsx'),
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'docs'),
     filename: 'etherbot.js',
-    publicPath: 'public/',
+    publicPath: 'docs/',
     library: 'EtherBot',
     libraryTarget: 'umd',
   },
