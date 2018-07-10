@@ -1,3 +1,4 @@
+require('dotenv').config();
 const path = require('path');
 const ChunkHashReplacePlugin  = require('chunkhash-replace-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
@@ -12,7 +13,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'docs'),
     host: '0.0.0.0',
-    port: 8080,
+    port: process.env.PORT || 8080,
     disableHostCheck: true,
   },
   resolve: {
