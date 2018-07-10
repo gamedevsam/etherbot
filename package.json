@@ -87,6 +87,7 @@
     "react": "^16.4.1",
     "react-device-detect": "^1.5.8",
     "react-dom": "^16.4.1",
+    "react-player": "^1.6.4",
     "react-simple-chatbot": "https://github.com/gamedevsam/react-simple-chatbot",
     "web3": "^1.0.0-beta.34"
   }

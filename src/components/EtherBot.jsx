@@ -1,122 +1,20 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { isMobile } from 'react-device-detect';
 import ChatBot from 'react-simple-chatbot';
 import EtherBotContainer from './EtherBotContainer';
-import {
-  mobileWidth,
-  mobileHeight,
-  browserWidth,
-  browserHeight
-} from './EtherBotContainer';
-import Price from './Price';
-import AccessMyWallet from './AccessMyWallet';
-import CreateWallet from './CreateWallet';
-import SendEthAndTokens from './SendEthAndTokens';
-import PrivacyAndSecurity from './PrivacyAndSecurity';
-import Settings from './Settings';
-import About from './About';
-import { validateAddress } from '../utils';
-
-var menuCount = 0;
-const steps = [
-  {
-    id: 'welcome',
-    hideInput: true,
-    message: 'Welcome to EtherBot!',
-    trigger: 'menu'
-  },
-  {
-    id: 'menu',
-    hideInput: true,
-    options: [
-      { value: menuCount++, label: 'Price', trigger: 'price' },
-      { value: menuCount++, label: 'Create Wallet', trigger: 'create-wallet' },
-      { value: menuCount++, label: 'Access Wallet', trigger: 'access-wallet' },
-      { value: menuCount++, label: 'Send Eth & Tokens', trigger: 'send-eth-and-tokens' },
-      { value: menuCount++, label: 'Privacy & Security', trigger: 'privacy-and-security' },
-      { value: menuCount++, label: 'Settings', trigger: 'settings' },
-      { value: menuCount++, label: 'About', trigger: 'about' }
-    ]
-  },
-  {
-    id: 'price',
-    asMessage: true,
-    hideInput: true,
-    waitAction: true,
-    component: <Price/>,
-    trigger: 'menu',
-  },
-  {
-    id: 'create-wallet',
-    asMessage: true,
-    hideInput: true,
-    waitAction: true,
-    component: <CreateWallet/>,
-    trigger: 'menu',
-  },
-  {
-    id: 'access-wallet',
-    message: "Please enter a wallet address:",
-    trigger: 'wallet',
-  },
-  {
-    id: 'wallet',
-    user: true,
-    validator: validateAddress,
-    trigger: 'wallet-balance',
-  },
-  {
-    id: 'wallet-balance',
-    asMessage: true,
-    hideInput: false,
-    waitAction: true,
-    component: <AccessMyWallet/>,
-    trigger: 'menu',
-  },
-  {
-    id: 'send-eth-and-tokens',
-    asMessage: true,
-    hideInput: true,
-    waitAction: true,
-    component: <SendEthAndTokens/>,
-    trigger: 'menu',
-  },
-  {
-    id: 'privacy-and-security',
-    hideInput: true,
-    waitAction: true,
-    component: <PrivacyAndSecurity/>,
-    trigger: 'menu',
-  },
-  {
-    id: 'settings',
-    asMessage: true,
-    hideInput: true,
-    waitAction: true,
-    component: <Settings/>,
-    trigger: 'menu',
-  },
-  {
-    id: 'about',
-    asMessage: true,
-    hideInput: true,
-    waitAction: true,
-    component: <About/>,
-    trigger: 'menu',
-  }
-];
+import { width, height } from './EtherBotContainer';
+import steps from '../steps';
 
 const EtherBot = () => (
   <EtherBotContainer>
     <ThemeProvider theme={{
-      background: '#f5f8fb',
+      background: '#ffffff',
       fontFamily: 'Helvetica Neue',
-      headerBgColor: '#343535',
-      headerFontColor: '#fff',
+      headerBgColor: '#f5f8fb',
+      headerFontColor: '#4a4a4a',
       headerFontSize: '16px',
-      botBubbleColor: '#343535',
-      botFontColor: '#fff',
+      botBubbleColor: '#f5f8fb',
+      botFontColor: '#4a4a4a',
       userBubbleColor: '#fff',
       userFontColor: '#4a4a4a'
     }}>
@@ -129,8 +27,8 @@ const EtherBot = () => (
         botDelay={0} /*ms*/
         userDelay={0} /*ms*/
         steps={steps}
-        width={isMobile ? `${mobileWidth}px` : `${browserWidth}px`}
-        height={isMobile ? `${mobileHeight}px` : `${browserHeight}px`}
+        width={`${width}px`}
+        height={`${height}px`}
       />
     </ThemeProvider>
   </EtherBotContainer>

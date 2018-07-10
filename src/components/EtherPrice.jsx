@@ -2,7 +2,7 @@ import React from 'react';
 import ResponseBase from './ResponseBase';
 import axios from 'axios'
 
-class Price extends ResponseBase {
+class EtherPrice extends ResponseBase {
   componentWillMount() {
     axios.get('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD,JPY,EUR')
       .then(response => {
@@ -12,4 +12,4 @@ class Price extends ResponseBase {
   }
 }
 
-export default Price
+export default EtherPrice

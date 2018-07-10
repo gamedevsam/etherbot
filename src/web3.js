@@ -1,5 +1,6 @@
 //https://github.com/ethereum/wiki/wiki/JavaScript-API
 import Web3 from 'web3';
+import axios from 'axios'
 
 var web3
 if (typeof web3 !== 'undefined') {

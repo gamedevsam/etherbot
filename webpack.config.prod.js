@@ -1,7 +1,7 @@
 const path = require('path');
-const ChunkHashReplacePlugin  = require('chunkhash-replace-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const ChunkHashReplacePlugin  = require('chunkhash-replace-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, 'src/main.jsx'),
@@ -14,10 +14,8 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   plugins: [
+    new UglifyJsPlugin(),
     new CleanWebpackPlugin(['docs/etherbot*.js']),
-    new UglifyJsPlugin({
-      comments: false,
-    }),
     new ChunkHashReplacePlugin({
       src: 'src/index.html',
       dest: 'docs/index.html',
