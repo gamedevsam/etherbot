@@ -1,4 +1,4 @@
-https://gamedevsam.github.io/etherbot/
+**https://gamedevsam.github.io/etherbot/**
 
 Derived from [React Simple Chatbot](https://github.com/LucasBassetti/react-simple-chatbot)
 
